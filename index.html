@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YUKI DESIGN — Graphic Designer</title>
+  <title>YUKI DESIGN — グラフィックデザイナー</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,10 +15,10 @@
   <nav class="nav" id="nav">
     <a href="#" class="nav__logo">YUKI DESIGN</a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="#works">Works</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#works">制作実績</a></li>
+      <li><a href="#about">について</a></li>
+      <li><a href="#services">サービス</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
     </ul>
     <button class="nav__menu-btn" id="menuBtn" aria-label="メニュー">
       <span></span><span></span>
@@ -28,134 +28,138 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero__top">
-      <span class="hero__label">Graphic Designer — Tokyo</span>
-      <span class="hero__label">名刺 · ロゴ · チラシ</span>
+      <span class="hero__label">グラフィックデザイナー &ensp;/&ensp; 東京</span>
+      <span class="hero__label">名刺 &ensp;·&ensp; ロゴ &ensp;·&ensp; チラシ</span>
     </div>
-    <h1 class="hero__title">
-      <span class="hero__title-line">Your Brand,</span>
-      <span class="hero__title-line hero__title-line--italic">First Impression.</span>
-    </h1>
-    <div class="hero__bottom">
-      <p class="hero__desc">デザインの力でブランドの第一印象をつくる。<br>シンプルで力強いビジュアルを、あなたのために。</p>
-      <a href="#works" class="hero__link">Works を見る <span>↓</span></a>
-    </div>
-    <div class="hero__img-strip">
-      <img src="assets/images/hero-bg.jpg" alt="">
+
+    <div class="hero__main">
+      <div class="hero__text">
+        <h1 class="hero__title">
+          <span class="hero__title-ja">ブランドの<em>第一印象</em>を、</span>
+          <span class="hero__title-ja">デザインで変える。</span>
+        </h1>
+        <p class="hero__desc">名刺・ロゴ・チラシを中心に、<br>ビジネスの顔をつくるお手伝いをしています。</p>
+        <a href="#works" class="hero__cta">制作実績を見る <span aria-hidden>→</span></a>
+      </div>
+      <div class="hero__img">
+        <img src="assets/images/hero-bg.jpg" alt="デザイン作品">
+      </div>
     </div>
   </section>
 
   <!-- Works -->
   <section class="works" id="works">
-    <div class="works__header">
-      <span class="section-num">01</span>
-      <h2 class="section-title">Selected Works</h2>
-    </div>
+    <header class="section-header">
+      <div class="section-header__left">
+        <span class="section-en">Works</span>
+        <h2 class="section-ja">制作実績</h2>
+      </div>
+      <p class="section-header__note">名刺・ロゴ・チラシを中心とした実績の一部をご紹介します。</p>
+    </header>
+
     <div class="works__grid">
-      <div class="work-item work-item--large">
+      <article class="work-item work-item--large">
         <div class="work-item__img">
-          <img src="assets/images/work1.jpg" alt="Café Brand Identity">
-          <div class="work-item__overlay">
-            <span class="work-item__tag">Logo</span>
-          </div>
+          <img src="assets/images/work1.jpg" alt="カフェ ブランドアイデンティティ">
+          <span class="work-item__tag">ロゴ</span>
         </div>
-        <div class="work-item__info">
+        <footer class="work-item__info">
           <p class="work-item__title">Café Brand Identity</p>
           <p class="work-item__year">2026</p>
-        </div>
-      </div>
-      <div class="work-item">
+        </footer>
+      </article>
+      <article class="work-item">
         <div class="work-item__img">
-          <img src="assets/images/work2.jpg" alt="Architecture Studio">
-          <div class="work-item__overlay">
-            <span class="work-item__tag">名刺</span>
-          </div>
+          <img src="assets/images/work2.jpg" alt="建築事務所 名刺">
+          <span class="work-item__tag">名刺</span>
         </div>
-        <div class="work-item__info">
-          <p class="work-item__title">Architecture Studio</p>
+        <footer class="work-item__info">
+          <p class="work-item__title">建築事務所</p>
           <p class="work-item__year">2025</p>
-        </div>
-      </div>
-      <div class="work-item">
+        </footer>
+      </article>
+      <article class="work-item">
         <div class="work-item__img">
-          <img src="assets/images/work3.jpg" alt="Art Exhibition">
-          <div class="work-item__overlay">
-            <span class="work-item__tag">チラシ</span>
-          </div>
+          <img src="assets/images/work3.jpg" alt="アート展覧会 チラシ">
+          <span class="work-item__tag">チラシ</span>
         </div>
-        <div class="work-item__info">
-          <p class="work-item__title">Art Exhibition</p>
+        <footer class="work-item__info">
+          <p class="work-item__title">アート展覧会</p>
           <p class="work-item__year">2025</p>
-        </div>
-      </div>
-      <div class="work-item">
+        </footer>
+      </article>
+      <article class="work-item">
         <div class="work-item__img">
-          <img src="assets/images/work4.jpg" alt="Wellness Brand">
-          <div class="work-item__overlay">
-            <span class="work-item__tag">Logo</span>
-          </div>
+          <img src="assets/images/work4.jpg" alt="ウェルネスブランド ロゴ">
+          <span class="work-item__tag">ロゴ</span>
         </div>
-        <div class="work-item__info">
+        <footer class="work-item__info">
           <p class="work-item__title">Wellness Brand</p>
           <p class="work-item__year">2025</p>
-        </div>
-      </div>
-      <div class="work-item work-item--large">
+        </footer>
+      </article>
+      <article class="work-item work-item--large">
         <div class="work-item__img">
-          <img src="assets/images/work5.jpg" alt="Photographer Portfolio">
-          <div class="work-item__overlay">
-            <span class="work-item__tag">名刺</span>
-          </div>
+          <img src="assets/images/work5.jpg" alt="フォトグラファー 名刺">
+          <span class="work-item__tag">名刺</span>
         </div>
-        <div class="work-item__info">
-          <p class="work-item__title">Photographer Portfolio</p>
+        <footer class="work-item__info">
+          <p class="work-item__title">フォトグラファー 名刺</p>
           <p class="work-item__year">2024</p>
-        </div>
-      </div>
-      <div class="work-item">
+        </footer>
+      </article>
+      <article class="work-item">
         <div class="work-item__img">
-          <img src="assets/images/work6.jpg" alt="Music Concert">
-          <div class="work-item__overlay">
-            <span class="work-item__tag">チラシ</span>
-          </div>
+          <img src="assets/images/work6.jpg" alt="音楽コンサート チラシ">
+          <span class="work-item__tag">チラシ</span>
         </div>
-        <div class="work-item__info">
-          <p class="work-item__title">Music Concert</p>
+        <footer class="work-item__info">
+          <p class="work-item__title">音楽コンサート</p>
           <p class="work-item__year">2024</p>
-        </div>
-      </div>
+        </footer>
+      </article>
     </div>
   </section>
 
   <!-- About -->
   <section class="about" id="about">
-    <div class="about__inner">
-      <div class="about__left">
-        <span class="section-num">02</span>
-        <h2 class="section-title">About</h2>
+    <header class="section-header">
+      <div class="section-header__left">
+        <span class="section-en">About</span>
+        <h2 class="section-ja">について</h2>
       </div>
-      <div class="about__right">
-        <p class="about__lead">ブランドの本質を見極め、<br>シンプルで力強いビジュアルを生み出します。</p>
-        <p class="about__body">名刺・ロゴ・チラシを中心に、あなたのブランドを洗練されたデザインで表現。余白と typography を大切にした、時代に左右されないデザインを追求しています。</p>
+    </header>
+    <div class="about__inner">
+      <div class="about__message">
+        <p class="about__lead">「シンプルなのに、印象に残る」<br>そんなデザインを目指しています。</p>
+        <p class="about__body">ブランドの本質を丁寧に聞き取り、余白と typography を大切にしたデザインをご提案します。名刺・ロゴ・チラシを中心に、5年以上にわたって様々な業種のお客さまをサポートしてきました。</p>
+        <p class="about__body">「デザインのことはよくわからない」という方にも、丁寧にヒアリングしながら進めますのでご安心ください。</p>
+      </div>
+      <div class="about__data">
         <div class="about__stats">
           <div class="stat">
-            <span class="stat__num">150+</span>
-            <span class="stat__label">Projects</span>
+            <span class="stat__num">150<small>件以上</small></span>
+            <span class="stat__label">制作実績</span>
           </div>
           <div class="stat">
-            <span class="stat__num">80+</span>
-            <span class="stat__label">Clients</span>
+            <span class="stat__num">80<small>社以上</small></span>
+            <span class="stat__label">取引先</span>
           </div>
           <div class="stat">
-            <span class="stat__num">5+</span>
-            <span class="stat__label">Years</span>
+            <span class="stat__num">5<small>年以上</small></span>
+            <span class="stat__label">経験</span>
           </div>
         </div>
-        <div class="about__tags">
-          <span>スタートアップ</span>
-          <span>飲食・小売</span>
-          <span>士業・コンサル</span>
-          <span>クリエイター</span>
-          <span>製造・建設</span>
+        <div class="about__clients">
+          <p class="about__clients-label">対応業種</p>
+          <div class="about__tags">
+            <span>スタートアップ</span>
+            <span>飲食・カフェ</span>
+            <span>士業・コンサル</span>
+            <span>クリエイター</span>
+            <span>小売・EC</span>
+            <span>製造・建設</span>
+          </div>
         </div>
       </div>
     </div>
@@ -163,57 +167,60 @@
 
   <!-- Services -->
   <section class="services" id="services">
-    <div class="services__header">
-      <span class="section-num">03</span>
-      <h2 class="section-title">Services</h2>
-    </div>
+    <header class="section-header">
+      <div class="section-header__left">
+        <span class="section-en">Services</span>
+        <h2 class="section-ja">サービス</h2>
+      </div>
+      <p class="section-header__note">すべてのサービスに修正対応が含まれます。まずはお気軽にご相談ください。</p>
+    </header>
     <div class="services__list">
       <div class="service-row">
-        <span class="service-row__num">01</span>
-        <div class="service-row__content">
+        <div class="service-row__num">01</div>
+        <div class="service-row__body">
           <h3 class="service-row__title">名刺デザイン</h3>
-          <p class="service-row__desc">第一印象を決定づける名刺。素材・形状・印刷方法まで含めたトータルデザインを提案します。</p>
+          <p class="service-row__desc">第一印象を決定づける名刺。素材・形状・印刷方法まで含めたトータルデザインをご提案します。</p>
         </div>
-        <div class="service-row__process">
+        <div class="service-row__flow">
           <span>ヒアリング</span>
-          <span class="sep">—</span>
-          <span>提案</span>
-          <span class="sep">—</span>
-          <span>修正</span>
-          <span class="sep">—</span>
-          <span>納品</span>
+          <span class="arrow">→</span>
+          <span>デザイン提案</span>
+          <span class="arrow">→</span>
+          <span>修正対応</span>
+          <span class="arrow">→</span>
+          <span>データ納品</span>
         </div>
       </div>
       <div class="service-row">
-        <span class="service-row__num">02</span>
-        <div class="service-row__content">
+        <div class="service-row__num">02</div>
+        <div class="service-row__body">
           <h3 class="service-row__title">ロゴデザイン</h3>
           <p class="service-row__desc">ブランドの核となるロゴを制作。コンセプト立案からガイドライン作成まで一貫してサポートします。</p>
         </div>
-        <div class="service-row__process">
+        <div class="service-row__flow">
           <span>ヒアリング</span>
-          <span class="sep">—</span>
-          <span>提案</span>
-          <span class="sep">—</span>
-          <span>修正</span>
-          <span class="sep">—</span>
-          <span>納品</span>
+          <span class="arrow">→</span>
+          <span>デザイン提案</span>
+          <span class="arrow">→</span>
+          <span>修正対応</span>
+          <span class="arrow">→</span>
+          <span>データ納品</span>
         </div>
       </div>
       <div class="service-row">
-        <span class="service-row__num">03</span>
-        <div class="service-row__content">
-          <h3 class="service-row__title">チラシ・印刷物</h3>
-          <p class="service-row__desc">イベント告知、商品案内など目的に応じたレイアウトと配色で、確実に伝わる印刷物を制作します。</p>
+        <div class="service-row__num">03</div>
+        <div class="service-row__body">
+          <h3 class="service-row__title">チラシ・印刷物デザイン</h3>
+          <p class="service-row__desc">イベント告知・商品案内・会社案内など、目的に応じたレイアウトと配色で確実に伝わる印刷物を制作します。</p>
         </div>
-        <div class="service-row__process">
+        <div class="service-row__flow">
           <span>ヒアリング</span>
-          <span class="sep">—</span>
-          <span>提案</span>
-          <span class="sep">—</span>
-          <span>修正</span>
-          <span class="sep">—</span>
-          <span>納品</span>
+          <span class="arrow">→</span>
+          <span>デザイン提案</span>
+          <span class="arrow">→</span>
+          <span>修正対応</span>
+          <span class="arrow">→</span>
+          <span>データ納品</span>
         </div>
       </div>
     </div>
@@ -221,28 +228,32 @@
 
   <!-- Contact -->
   <section class="contact" id="contact">
-    <div class="contact__inner">
-      <span class="section-num">04</span>
-      <h2 class="contact__title">Let's Work<br><em>Together</em></h2>
-      <p class="contact__desc">まずはお気軽にご相談ください。</p>
-      <div class="contact__options">
-        <a href="mailto:hello@yukidesign.jp?subject=無料相談のご希望" class="contact-card">
-          <span class="contact-card__title">無料相談</span>
-          <p>30分 / オンライン</p>
-        </a>
-        <a href="mailto:hello@yukidesign.jp?subject=お見積もりのご依頼" class="contact-card">
-          <span class="contact-card__title">お見積もり</span>
-          <p>プロジェクト詳細を伺います</p>
-        </a>
+    <header class="section-header">
+      <div class="section-header__left">
+        <span class="section-en">Contact</span>
+        <h2 class="section-ja">お問い合わせ</h2>
       </div>
-      <p class="contact__email">hello@yukidesign.jp</p>
+      <p class="section-header__note">「こんなこと頼めるの？」と思うようなご相談もお気軽にどうぞ。<br>まずはお話を聞かせていただきます。</p>
+    </header>
+    <div class="contact__options">
+      <a href="mailto:hello@yukidesign.jp?subject=無料相談のご希望" class="contact-card">
+        <div class="contact-card__icon">💬</div>
+        <h3 class="contact-card__title">まず相談してみる</h3>
+        <p>30分のオンライン相談（無料）<br>どんな小さなご質問でもOKです</p>
+      </a>
+      <a href="mailto:hello@yukidesign.jp?subject=お見積もりのご依頼" class="contact-card">
+        <div class="contact-card__icon">📋</div>
+        <h3 class="contact-card__title">見積もりを依頼する</h3>
+        <p>プロジェクトの詳細をお聞きして<br>正確なお見積もりをご提案します</p>
+      </a>
     </div>
+    <p class="contact__note">メールでのお問い合わせ：<a href="mailto:hello@yukidesign.jp" class="contact__email">hello@yukidesign.jp</a></p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <span>YUKI DESIGN</span>
-    <span>&copy; 2026 All rights reserved.</span>
+    <p class="footer__logo">YUKI DESIGN</p>
+    <p class="footer__copy">© 2026 Yuki Design. All rights reserved.</p>
   </footer>
 
   <script src="js/main.js"></script>
