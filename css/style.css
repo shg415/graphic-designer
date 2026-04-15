@@ -122,14 +122,17 @@ img { max-width: 100%; display: block; object-fit: cover; }
   transition: gap 0.3s, opacity 0.2s;
 }
 .hero__cta:hover { gap: 18px; opacity: 0.7; }
+.hero__cta svg { transition: transform 0.3s; }
+.hero__cta:hover svg { transform: translateX(4px); }
 
 .hero__img {
   overflow: hidden; position: relative;
   background: var(--bg2);
 }
 .hero__img img {
-  width: 100%; height: 100%;
+  width: 100%; height: 110%;  /* 少し大きめにしてパララックス余白確保 */
   object-fit: cover; object-position: center;
+  transform-origin: center top;
 }
 
 /* ============================================
@@ -271,7 +274,7 @@ img { max-width: 100%; display: block; object-fit: cover; }
   gap: 6px; font-size: 12px; color: var(--muted);
   padding-top: 6px;
 }
-.service-row__flow .arrow { color: var(--border); font-size: 11px; }
+.flow-arrow { color: var(--border); flex-shrink: 0; }
 
 /* ============================================
    CONTACT
@@ -328,10 +331,16 @@ img { max-width: 100%; display: block; object-fit: cover; }
 .footer__copy { font-size: 11px; color: var(--muted); }
 
 /* ============================================
-   ANIMATIONS
+   ANIMATIONS (managed by GSAP)
    ============================================ */
-.fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.8s ease, transform 0.8s ease; }
-.fade-in.visible { opacity: 1; transform: none; }
+/* Initial states — GSAP will animate these */
+.gsap-fade   { opacity: 0; }
+.gsap-up     { opacity: 0; transform: translateY(40px); }
+.gsap-left   { opacity: 0; transform: translateX(-30px); }
+.gsap-scale  { opacity: 0; transform: scale(0.96); }
+
+/* Parallax layer */
+.parallax-img { will-change: transform; }
 
 /* ============================================
    RESPONSIVE
