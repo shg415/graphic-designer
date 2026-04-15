@@ -288,7 +288,12 @@ img { max-width: 100%; display: block; object-fit: cover; }
 }
 .contact-card:hover { background: #fff; }
 
-.contact-card__icon { font-size: 1.6rem; margin-bottom: 16px; }
+.contact-card__num {
+  display: block;
+  font-family: var(--serif-en);
+  font-size: 1.4rem; font-weight: 400;
+  color: var(--border); margin-bottom: 16px; line-height: 1;
+}
 .contact-card__title {
   font-size: 16px; font-weight: 500;
   margin-bottom: 12px; letter-spacing: 0.02em;
