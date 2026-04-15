@@ -6,154 +6,201 @@
   <title>YUKI DESIGN — グラフィックデザイナー</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- ローディング -->
+  <div class="loader" id="loader">
+    <span class="loader__text">YUKI DESIGN</span>
+  </div>
+
+  <!-- ナビゲーション -->
   <nav class="nav" id="nav">
-    <a href="#" class="nav__logo">YUKI DESIGN</a>
+    <a href="#" class="nav__logo">
+      <span>YUKI</span>
+      <span>DESIGN</span>
+    </a>
     <ul class="nav__links" id="navLinks">
       <li><a href="#works">制作実績</a></li>
       <li><a href="#about">について</a></li>
       <li><a href="#services">サービス</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
     </ul>
-    <button class="nav__menu-btn" id="menuBtn" aria-label="メニュー">
-      <span></span><span></span>
+    <button class="nav__toggle" id="menuBtn" aria-label="メニュー">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
     </button>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero__top">
-      <span class="hero__label">グラフィックデザイナー &ensp;/&ensp; 東京</span>
-      <span class="hero__label">名刺 &ensp;·&ensp; ロゴ &ensp;·&ensp; チラシ</span>
+  <!-- ヒーロー -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="assets/images/hero-bg.jpg" alt="" class="hero__bg-img" id="heroImg">
     </div>
-
-    <div class="hero__main">
-      <div class="hero__text">
-        <h1 class="hero__title">
-          <span class="hero__title-ja">ブランドの<em>第一印象</em>を、</span>
-          <span class="hero__title-ja">デザインで変える。</span>
-        </h1>
-        <p class="hero__desc">名刺・ロゴ・チラシを中心に、<br>ビジネスの顔をつくるお手伝いをしています。</p>
-        <a href="#works" class="hero__cta">
-      制作実績を見る
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-      </div>
-      <div class="hero__img">
-        <img src="assets/images/hero-bg.jpg" alt="デザイン作品">
+    <div class="hero__content">
+      <p class="hero__eyebrow" id="heroEyebrow">Graphic Designer — Tokyo</p>
+      <h1 class="hero__title" id="heroTitle">
+        <span class="hero__line" data-text="ブランドの">ブランドの</span>
+        <span class="hero__line" data-text="第一印象を、">第一印象を、</span>
+        <span class="hero__line hero__line--en" data-text="Design.">Design.</span>
+      </h1>
+      <div class="hero__meta">
+        <p class="hero__sub">名刺 &ensp;·&ensp; ロゴ &ensp;·&ensp; チラシ</p>
+        <a href="#works" class="hero__scroll">
+          <svg width="1" height="60" viewBox="0 0 1 60"><line x1="0.5" y1="0" x2="0.5" y2="60" stroke="currentColor" stroke-width="1"/></svg>
+          <span>Scroll</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Works -->
+  <!-- マーキー -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>名刺デザイン</span><span class="sep">—</span>
+      <span>ロゴデザイン</span><span class="sep">—</span>
+      <span>チラシ・印刷物</span><span class="sep">—</span>
+      <span>ブランドアイデンティティ</span><span class="sep">—</span>
+      <span>名刺デザイン</span><span class="sep">—</span>
+      <span>ロゴデザイン</span><span class="sep">—</span>
+      <span>チラシ・印刷物</span><span class="sep">—</span>
+      <span>ブランドアイデンティティ</span><span class="sep">—</span>
+      <span>名刺デザイン</span><span class="sep">—</span>
+      <span>ロゴデザイン</span><span class="sep">—</span>
+      <span>チラシ・印刷物</span><span class="sep">—</span>
+      <span>ブランドアイデンティティ</span><span class="sep">—</span>
+    </div>
+  </div>
+
+  <!-- 制作実績 -->
   <section class="works" id="works">
-    <header class="section-header">
-      <div class="section-header__left">
-        <span class="section-en">Works</span>
-        <h2 class="section-ja">制作実績</h2>
+    <header class="works__header">
+      <div class="works__header-left">
+        <span class="label-en">Works</span>
+        <h2 class="heading-ja">制作実績</h2>
       </div>
-      <p class="section-header__note">名刺・ロゴ・チラシを中心とした実績の一部をご紹介します。</p>
+      <p class="works__note">名刺・ロゴ・チラシを中心とした実績の一部をご紹介します。</p>
     </header>
 
     <div class="works__grid">
-      <article class="work-item work-item--large">
-        <div class="work-item__img">
-          <img src="assets/images/work1.jpg" alt="カフェ ブランドアイデンティティ">
-          <span class="work-item__tag">ロゴ</span>
+      <!-- フィーチャー大 -->
+      <article class="work work--feat">
+        <div class="work__img-wrap">
+          <img src="assets/images/work1.jpg" alt="カフェ ブランドアイデンティティ" class="work__img">
+          <div class="work__overlay">
+            <span class="work__category">ロゴ</span>
+            <svg class="work__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </div>
-        <footer class="work-item__info">
-          <p class="work-item__title">Café Brand Identity</p>
-          <p class="work-item__year">2026</p>
+        <footer class="work__foot">
+          <p class="work__title">Café Brand Identity</p>
+          <p class="work__year">2026</p>
         </footer>
       </article>
-      <article class="work-item">
-        <div class="work-item__img">
-          <img src="assets/images/work2.jpg" alt="建築事務所 名刺">
-          <span class="work-item__tag">名刺</span>
+
+      <!-- 縦2段 -->
+      <div class="works__col">
+        <article class="work">
+          <div class="work__img-wrap">
+            <img src="assets/images/work2.jpg" alt="建築事務所 名刺" class="work__img">
+            <div class="work__overlay">
+              <span class="work__category">名刺</span>
+              <svg class="work__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <footer class="work__foot">
+            <p class="work__title">建築事務所</p>
+            <p class="work__year">2025</p>
+          </footer>
+        </article>
+        <article class="work">
+          <div class="work__img-wrap">
+            <img src="assets/images/work3.jpg" alt="アート展覧会 チラシ" class="work__img">
+            <div class="work__overlay">
+              <span class="work__category">チラシ</span>
+              <svg class="work__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <footer class="work__foot">
+            <p class="work__title">Art Exhibition</p>
+            <p class="work__year">2025</p>
+          </footer>
+        </article>
+      </div>
+
+      <!-- 横3列 -->
+      <article class="work work--sm">
+        <div class="work__img-wrap">
+          <img src="assets/images/work4.jpg" alt="ウェルネスブランド ロゴ" class="work__img">
+          <div class="work__overlay">
+            <span class="work__category">ロゴ</span>
+            <svg class="work__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </div>
-        <footer class="work-item__info">
-          <p class="work-item__title">建築事務所</p>
-          <p class="work-item__year">2025</p>
+        <footer class="work__foot">
+          <p class="work__title">Wellness Brand</p>
+          <p class="work__year">2025</p>
         </footer>
       </article>
-      <article class="work-item">
-        <div class="work-item__img">
-          <img src="assets/images/work3.jpg" alt="アート展覧会 チラシ">
-          <span class="work-item__tag">チラシ</span>
+      <article class="work work--sm">
+        <div class="work__img-wrap">
+          <img src="assets/images/work5.jpg" alt="フォトグラファー 名刺" class="work__img">
+          <div class="work__overlay">
+            <span class="work__category">名刺</span>
+            <svg class="work__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </div>
-        <footer class="work-item__info">
-          <p class="work-item__title">アート展覧会</p>
-          <p class="work-item__year">2025</p>
+        <footer class="work__foot">
+          <p class="work__title">フォトグラファー 名刺</p>
+          <p class="work__year">2024</p>
         </footer>
       </article>
-      <article class="work-item">
-        <div class="work-item__img">
-          <img src="assets/images/work4.jpg" alt="ウェルネスブランド ロゴ">
-          <span class="work-item__tag">ロゴ</span>
+      <article class="work work--sm">
+        <div class="work__img-wrap">
+          <img src="assets/images/work6.jpg" alt="音楽コンサート チラシ" class="work__img">
+          <div class="work__overlay">
+            <span class="work__category">チラシ</span>
+            <svg class="work__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </div>
-        <footer class="work-item__info">
-          <p class="work-item__title">Wellness Brand</p>
-          <p class="work-item__year">2025</p>
-        </footer>
-      </article>
-      <article class="work-item work-item--large">
-        <div class="work-item__img">
-          <img src="assets/images/work5.jpg" alt="フォトグラファー 名刺">
-          <span class="work-item__tag">名刺</span>
-        </div>
-        <footer class="work-item__info">
-          <p class="work-item__title">フォトグラファー 名刺</p>
-          <p class="work-item__year">2024</p>
-        </footer>
-      </article>
-      <article class="work-item">
-        <div class="work-item__img">
-          <img src="assets/images/work6.jpg" alt="音楽コンサート チラシ">
-          <span class="work-item__tag">チラシ</span>
-        </div>
-        <footer class="work-item__info">
-          <p class="work-item__title">音楽コンサート</p>
-          <p class="work-item__year">2024</p>
+        <footer class="work__foot">
+          <p class="work__title">音楽コンサート</p>
+          <p class="work__year">2024</p>
         </footer>
       </article>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- について（ダーク・パララックス） -->
   <section class="about" id="about">
-    <header class="section-header">
-      <div class="section-header__left">
-        <span class="section-en">About</span>
-        <h2 class="section-ja">について</h2>
-      </div>
-    </header>
+    <div class="about__parallax-bg" id="aboutBg"></div>
     <div class="about__inner">
-      <div class="about__message">
-        <p class="about__lead">「シンプルなのに、印象に残る」<br>そんなデザインを目指しています。</p>
-        <p class="about__body">ブランドの本質を丁寧に聞き取り、余白と typography を大切にしたデザインをご提案します。名刺・ロゴ・チラシを中心に、5年以上にわたって様々な業種のお客さまをサポートしてきました。</p>
-        <p class="about__body">「デザインのことはよくわからない」という方にも、丁寧にヒアリングしながら進めますのでご安心ください。</p>
+      <div class="about__left">
+        <span class="label-en label-en--light">About</span>
+        <h2 class="about__heading">「シンプルなのに、<br>印象に残る」</h2>
+        <p class="about__body">そんなデザインを目指しています。ブランドの本質を丁寧に聞き取り、余白と typography を大切にした上質なデザインをご提案します。</p>
+        <p class="about__body">「デザインのことはよくわからない」という方にも、わかりやすくご説明しながら進めますのでご安心ください。</p>
       </div>
-      <div class="about__data">
+      <div class="about__right">
         <div class="about__stats">
           <div class="stat">
-            <span class="stat__num">150<small>件以上</small></span>
+            <span class="stat__num" data-target="150">0</span>
+            <span class="stat__unit">件以上</span>
             <span class="stat__label">制作実績</span>
           </div>
           <div class="stat">
-            <span class="stat__num">80<small>社以上</small></span>
+            <span class="stat__num" data-target="80">0</span>
+            <span class="stat__unit">社以上</span>
             <span class="stat__label">取引先</span>
           </div>
           <div class="stat">
-            <span class="stat__num">5<small>年以上</small></span>
+            <span class="stat__num" data-target="5">0</span>
+            <span class="stat__unit">年以上</span>
             <span class="stat__label">経験</span>
           </div>
         </div>
@@ -172,95 +219,123 @@
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- サービス -->
   <section class="services" id="services">
-    <header class="section-header">
-      <div class="section-header__left">
-        <span class="section-en">Services</span>
-        <h2 class="section-ja">サービス</h2>
-      </div>
-      <p class="section-header__note">すべてのサービスに修正対応が含まれます。まずはお気軽にご相談ください。</p>
+    <header class="services__header">
+      <span class="label-en">Services</span>
+      <h2 class="heading-ja">サービス</h2>
+      <p class="services__note">すべてのサービスにヒアリング・修正対応が含まれます。</p>
     </header>
-    <div class="services__list">
-      <div class="service-row">
-        <div class="service-row__num">01</div>
-        <div class="service-row__body">
-          <h3 class="service-row__title">名刺デザイン</h3>
-          <p class="service-row__desc">第一印象を決定づける名刺。素材・形状・印刷方法まで含めたトータルデザインをご提案します。</p>
+
+    <div class="services__table">
+      <div class="svc-row">
+        <span class="svc-row__num">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="0.8"/><text x="16" y="20.5" text-anchor="middle" font-size="11" font-family="Cormorant Garamond, serif" fill="currentColor">01</text></svg>
+        </span>
+        <div class="svc-row__body">
+          <h3 class="svc-row__title">名刺デザイン</h3>
+          <p class="svc-row__desc">第一印象を決定づける名刺。素材・形状・印刷方法まで含めたトータルデザインをご提案します。</p>
         </div>
-        <div class="service-row__flow">
+        <div class="svc-row__flow">
           <span>ヒアリング</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>デザイン提案</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>修正対応</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>データ納品</span>
         </div>
       </div>
-      <div class="service-row">
-        <div class="service-row__num">02</div>
-        <div class="service-row__body">
-          <h3 class="service-row__title">ロゴデザイン</h3>
-          <p class="service-row__desc">ブランドの核となるロゴを制作。コンセプト立案からガイドライン作成まで一貫してサポートします。</p>
+
+      <div class="svc-row">
+        <span class="svc-row__num">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="0.8"/><text x="16" y="20.5" text-anchor="middle" font-size="11" font-family="Cormorant Garamond, serif" fill="currentColor">02</text></svg>
+        </span>
+        <div class="svc-row__body">
+          <h3 class="svc-row__title">ロゴデザイン</h3>
+          <p class="svc-row__desc">ブランドの核となるロゴを制作。コンセプト立案からガイドライン作成まで一貫してサポートします。</p>
         </div>
-        <div class="service-row__flow">
+        <div class="svc-row__flow">
           <span>ヒアリング</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>デザイン提案</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>修正対応</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>データ納品</span>
         </div>
       </div>
-      <div class="service-row">
-        <div class="service-row__num">03</div>
-        <div class="service-row__body">
-          <h3 class="service-row__title">チラシ・印刷物デザイン</h3>
-          <p class="service-row__desc">イベント告知・商品案内・会社案内など、目的に応じたレイアウトと配色で確実に伝わる印刷物を制作します。</p>
+
+      <div class="svc-row">
+        <span class="svc-row__num">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="0.8"/><text x="16" y="20.5" text-anchor="middle" font-size="11" font-family="Cormorant Garamond, serif" fill="currentColor">03</text></svg>
+        </span>
+        <div class="svc-row__body">
+          <h3 class="svc-row__title">チラシ・印刷物デザイン</h3>
+          <p class="svc-row__desc">イベント告知・商品案内・会社案内など、目的に応じたレイアウトと配色で確実に伝わる印刷物を制作します。</p>
         </div>
-        <div class="service-row__flow">
+        <div class="svc-row__flow">
           <span>ヒアリング</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>デザイン提案</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>修正対応</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="flow-arrow"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M15 1l3 3-3 3" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>データ納品</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- お問い合わせ（ダーク） -->
   <section class="contact" id="contact">
-    <header class="section-header">
-      <div class="section-header__left">
-        <span class="section-en">Contact</span>
-        <h2 class="section-ja">お問い合わせ</h2>
+    <div class="contact__inner">
+      <span class="label-en label-en--light">Contact</span>
+      <h2 class="contact__heading">
+        <span>まずは</span>
+        <em>お気軽に</em>
+        <span>どうぞ。</span>
+      </h2>
+      <p class="contact__sub">「こんなこと頼めるの？」という小さなご相談もお待ちしています。</p>
+
+      <div class="contact__cards">
+        <a href="mailto:hello@yukidesign.jp?subject=無料相談のご希望" class="contact-card">
+          <div class="contact-card__head">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="0.8"/><path d="M10 6v4l3 3" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+            <span class="contact-card__label">01</span>
+          </div>
+          <h3 class="contact-card__title">まず相談してみる</h3>
+          <p>30分のオンライン相談（無料）<br>どんな小さなご質問でもOKです</p>
+          <svg class="contact-card__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H4M16 4v12" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="mailto:hello@yukidesign.jp?subject=お見積もりのご依頼" class="contact-card">
+          <div class="contact-card__head">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="1" stroke="currentColor" stroke-width="0.8"/><path d="M7 8h6M7 11h4" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+            <span class="contact-card__label">02</span>
+          </div>
+          <h3 class="contact-card__title">見積もりを依頼する</h3>
+          <p>プロジェクトの詳細をお聞きして<br>正確なお見積もりをご提案します</p>
+          <svg class="contact-card__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H4M16 4v12" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
-      <p class="section-header__note">「こんなこと頼めるの？」と思うようなご相談もお気軽にどうぞ。<br>まずはお話を聞かせていただきます。</p>
-    </header>
-    <div class="contact__options">
-      <a href="mailto:hello@yukidesign.jp?subject=無料相談のご希望" class="contact-card">
-        <span class="contact-card__num">01</span>
-        <h3 class="contact-card__title">まず相談してみる</h3>
-        <p>30分のオンライン相談（無料）<br>どんな小さなご質問でもOKです</p>
-      </a>
-      <a href="mailto:hello@yukidesign.jp?subject=お見積もりのご依頼" class="contact-card">
-        <span class="contact-card__num">02</span>
-        <h3 class="contact-card__title">見積もりを依頼する</h3>
-        <p>プロジェクトの詳細をお聞きして<br>正確なお見積もりをご提案します</p>
-      </a>
+
+      <p class="contact__email-note">
+        メール:
+        <a href="mailto:hello@yukidesign.jp" class="contact__email">hello@yukidesign.jp</a>
+      </p>
     </div>
-    <p class="contact__note">メールでのお問い合わせ：<a href="mailto:hello@yukidesign.jp" class="contact__email">hello@yukidesign.jp</a></p>
   </section>
 
-  <!-- Footer -->
+  <!-- フッター -->
   <footer class="footer">
     <p class="footer__logo">YUKI DESIGN</p>
-    <p class="footer__copy">© 2026 Yuki Design. All rights reserved.</p>
+    <nav class="footer__nav">
+      <a href="#works">制作実績</a>
+      <a href="#about">について</a>
+      <a href="#services">サービス</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">© 2026 Yuki Design.</p>
   </footer>
 
   <script src="js/main.js"></script>
